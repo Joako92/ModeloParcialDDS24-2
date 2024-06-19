@@ -37,6 +37,11 @@ function Menu() {
                 Articulos
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/deudores">
+                Deudores
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

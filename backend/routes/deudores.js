@@ -36,4 +36,14 @@ router.post('/api/deudores', async (req, res) => {
   }
 });
 
+// Baja deudor
+router.delete("/api/deudores/:id", async (req, res) => {
+    console.log("Borrando:",req.params.id)
+    let filasBorradas = await db.deudores.destroy({
+      where: { IdDeudor: req.params.id },
+    });
+    if (filasBorradas == 1) res.sendStatus(200);
+    else res.sendStatus(404);
+  })
+
 module.exports = router;

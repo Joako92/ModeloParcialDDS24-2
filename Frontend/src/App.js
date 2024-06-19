@@ -6,6 +6,7 @@ import { Menu } from "./components/Menu";
 import { Footer } from "./components/Footer";
 import { Articulos } from "./components/articulos/Articulos";
 import { ModalDialog } from "./components/ModalDialog";
+import DeudoresListado from "./components/deudores/DeudoresListado";  
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/inicio" element={<Inicio />} />
             <Route path="/articulosfamilias" element={<ArticulosFamilias />} />
             <Route path="/articulos" element={<Articulos />} />
+            <Route path="/deudores" element={<DeudoresListado />} />
             <Route path="*" element={<Navigate to="/inicio" replace />} />
           </Routes>
         </div>
